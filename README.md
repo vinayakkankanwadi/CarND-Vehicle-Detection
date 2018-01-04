@@ -1,16 +1,52 @@
 # Vehicle Detection
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
+<img src="writeup_images/overview.PNG" width="920" alt="Combined Image" />
 
-In this project, your goal is to write a software pipeline to detect vehicles in a video (start with the test_video.mp4 and later implement on full project_video.mp4), but the main output or product we want you to create is a detailed writeup of the project.  Check out the [writeup template](https://github.com/udacity/CarND-Vehicle-Detection/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup.  
-
-Creating a great writeup:
+Overview
 ---
-A great writeup should include the rubric points as well as your description of how you addressed each point.  You should include a detailed description of the code used in each step (with line-number references and code snippets where necessary), and links to other supporting documents or external references.  You should include images in your writeup to demonstrate how your code works with examples.  
+In this project, we will use write a software pipeline to detect vehicles in a video (start with the test_video.mp4 and later implement on full project_video.mp4) however the main product is to create a detailed writeup of the project.
 
-All that said, please be concise!  We're not looking for you to write a book here, just a brief description of how you passed each rubric point, and references to the relevant code :). 
+Goals
+---
+- Histogram of Oriented Gradients (HOG)
+  - Feature extraction on a labeled training set of images 
+  - Train a classifier Linear SVM classifier using selected HOG features
+- Sliding Window Search (SWS)
+  - Implement a SWS technique
+  - Use trained classifier to search for vehicles in images.
+- Video Implementation
+  - The SWS plus classifier has been used to search for and identify vehicles in the videos provided. 
+  - Implement some kind of filter for false positives and some method for combining overlapping bounding boxes.
+- Reflection
 
-You can submit your writeup in markdown or use another method and submit a pdf instead.
+Files
+---
+
+Loading and Visualizing the data
+---
+- Datasets provided by Udacity
+  - [Car Images](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/vehicles.zip)
+  - [NonCar Images](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/non-vehicles.zip)
+  - Example of random sample images from the vehicle and non-vehicle datasets.
+<img src="output_images/data_visualization.png" width="920" alt="Combined Image" />
+
+
+Histogram of Oriented Gradients (HOG) - Feature extraction from training images(HOW) and final parameters.
+---
+The **get_hog_features** function takes in an image and computes the Histogram of Oriented Gradient (HOG).
+Takes image as input and HOG parameters **(orientations, pixels_per_cell, cells_per_block)**
+Final HOG parameters
+orient = 9
+pix_per_cell = 8
+cell_per_block = 2
+
+
+def get_hog_features(img, orient, pix_per_cell, cell_per_block, 
+
+
+Explanation given for methods used to extract HOG features, including which color space was chosen, which HOG parameters (orientations, pixels_per_cell, cells_per_block), and why.
+
 
 The Project
 ---
