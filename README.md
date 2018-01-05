@@ -31,6 +31,23 @@ Loading and Visualizing the data
   - Example of random sample images from the vehicle and non-vehicle datasets.
 <img src="output_images/data_visualization.png" width="920" alt="Combined Image" />
 
+
+Histogram of Oriented Gradients (HOG) - Feature extraction from training images(HOW) and final parameters.
+---
+The **get_hog_features** function takes in an image and computes the Histogram of Oriented Gradient (HOG).
+Takes image as input and HOG parameters **(orientations, pixels_per_cell, cells_per_block)**
+Final HOG parameters
+orient = 9
+pix_per_cell = 8
+cell_per_block = 2
+
+
+def get_hog_features(img, orient, pix_per_cell, cell_per_block, 
+
+
+Explanation given for methods used to extract HOG features, including which color space was chosen, which HOG parameters (orientations, pixels_per_cell, cells_per_block), and why.
+
+
 The Project
 ---
 
