@@ -23,6 +23,14 @@ Goals
 Files
 ---
 
+Loading and Visualizing the data
+---
+- Datasets provided by Udacity
+  - [Car Images](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/vehicles.zip)
+  - [NonCar Images](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/non-vehicles.zip)
+  - Example of random sample images from the vehicle and non-vehicle datasets.
+<img src="output_images/data_visualization.png" width="920" alt="Combined Image" />
+
 The Project
 ---
 
