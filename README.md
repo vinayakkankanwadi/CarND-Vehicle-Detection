@@ -34,19 +34,30 @@ Loading and Visualizing the data
 
 Histogram of Oriented Gradients (HOG) - Feature extraction from training images(HOW) and final parameters.
 ---
+**HOG FINAL PARAMETERS**
+```
+color_space = 'YCrCb' 
+orient = 9  
+pix_per_cell = 8 
+cell_per_block = 2
+hog_channel = "ALL"
+```
+
 The **get_hog_features** function takes in an image and computes the Histogram of Oriented Gradient (HOG).
 Takes image as input and HOG parameters **(orientations, pixels_per_cell, cells_per_block)**
-Final HOG parameters
-orient = 9
-pix_per_cell = 8
-cell_per_block = 2
 
-
-def get_hog_features(img, orient, pix_per_cell, cell_per_block, 
-
-
-Explanation given for methods used to extract HOG features, including which color space was chosen, which HOG parameters (orientations, pixels_per_cell, cells_per_block), and why.
-
+**Sample Result of Different HOG parameters**
+```
+| SVC Accuracy | Orientation | Pixels Per Cell| Feature Vector Length| Time|
+|----------|-------------|----------------|----------------------|-----|
+|98.59%|11|16|2|4356|237|
+|98.45%|9|16|2|4140|110|
+|97.38%|11|16|2|4356|104|
+|97.61%|9|16|2|4140|107|
+|**98.62%**|9|8|2|8460|103|
+|----------|-------------|----------------|----------------------|-----|
+```
+Accuracy and Time taken were considered when finalizing HOG Parameters
 
 The Project
 ---
