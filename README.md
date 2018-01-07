@@ -30,7 +30,8 @@ In this project, we will use write a software pipeline to detect vehicles in a v
 
 
 ### Histogram of Oriented Gradients (HOG) 
-    - Feature extraction from training images(HOW) and final parameters.
+#### Feature extraction from training images(HOW) and final parameters.
+
 **HOG FINAL PARAMETERS**
 ```
 color_space = 'YCrCb' 
@@ -45,16 +46,24 @@ Takes image as input and HOG parameters **(orientations, pixels_per_cell, cells_
 
 **Sample Result of Different HOG parameters**
 
-| SVC Accuracy | Orientation | Pixels Per Cell| Feature Vector Length| Time|
+| SVM Accuracy | Orientation | Pixels Per Cell| Feature Vector Length| Time|
 |:------------:|:-----------:|:--------------:|:--------------------:|----:|
 |98.59%|11|16|2|4356|237|
 |98.45%|9|16|2|4140|110|
 |97.38%|11|16|2|4356|104|
 |97.61%|9|16|2|4140|107|
-|**98.62%**|9|8|2|8460|103|
+|**98.62%|9|8|2|8460|103**|
+
+Color Space mainly used were RGB, YUV, YCrCb.
+
+**Accuracy and Time taken were considered when finalizing HOG Parameters**
 
 
-Accuracy and Time taken were considered when finalizing HOG Parameters
+### Histogram of Oriented Gradients (HOG) 
+#### Training classifier using selected HOG featres
+
+**SVM Classifier** with the default classifier parameters using HOG features as indicated above was able to achieve test accuracy of **98.62%**.  Features were scaled to zero mean  and unit variance before training the classifier using sklearn's **StandardScaler**.
+
 
 The Project
 ---
