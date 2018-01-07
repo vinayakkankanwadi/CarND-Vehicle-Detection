@@ -18,6 +18,11 @@ In this project, we will use write a software pipeline to detect vehicles in a v
   - Implement some kind of filter for false positives and some method for combining overlapping bounding boxes.
 - Reflection
 
+### Result
+ |Project Video            |
+ |:-----------------------:|
+ |<img src="/output_images/project_video.gif" width="600" height="330" alt="Track1" />|
+ 
 ### Files
 - [Notbook](Vehicle_Detection.ipynb)
 - [Result](./test_videos/project_output.mp4)
