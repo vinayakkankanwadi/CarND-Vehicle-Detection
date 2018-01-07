@@ -67,7 +67,7 @@ Color Space mainly used were RGB, YUV, YCrCb.
 
 ### Sliding Window Search
 
-<img src="writeup_images/sliding-final.PNG" width="560" alt="Sliding" />
+<img src="writeup_images/sliding-final.PNG" alt="Sliding" />
 
 * Implement a sliding-window technique and use your trained classifier to search for vehicles in images.
 * Run your pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
