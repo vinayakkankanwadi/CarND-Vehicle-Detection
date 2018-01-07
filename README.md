@@ -66,10 +66,36 @@ Color Space mainly used were RGB, YUV, YCrCb.
 
 
 ### Sliding Window Search
+##### Implementing sliding window search scales overlap windows.
+
+Final Scales and window sizing.
+```
+scales = [1, 1.5]
+y_start_stops = [[380, 460], [380, 560]]
+```
+
+Different scales and windows found to be relevant as tried out in [notebook](Vehicle_Detection.ipynb) 
+
+```
+scales = [1, 1.5, 2, 2.5, 4]
+y_start_stops = [[380, 460], [380, 560], [380, 620], [380, 680], [350, 700]]
+```
+
+After playing with sliding window the result was to use **find_cars** mthong from the lesson with bit of tweaking.
+**cells_per_step = 1** used instead of overlap to define how many cells to step.
+
+
+### Sliding Window Search
+##### Example of test images using pipeline and performance optimization
 
 <img src="writeup_images/sliding-final.PNG" alt="Sliding" />
 
-* Implement a sliding-window technique and use your trained classifier to search for vehicles in images.
+Performance was optimized by using
+- **heatmap**
+- **threshold**
+- **window sizing**
+
+
 * Run your pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
 * Estimate a bounding box for vehicles detected.
 
