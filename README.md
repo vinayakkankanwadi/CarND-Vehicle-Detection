@@ -20,7 +20,7 @@ In this project, we will use write a software pipeline to detect vehicles in a v
 
 ### Files
 - [Notbook](Vehicle_Detection.ipynb)
-- [Result](test_videos\project_video.mp4)
+- [Result](./test_videos/project_output.mp4)
 
 ### Loading and Visualizing the data
 - Datasets provided by Udacity
@@ -104,7 +104,7 @@ Performance was optimized by using
 ### Video Implementation
 #### Link to final video where pipeline perform reasonably well.
 [Project Video Input](project_video.mp4)
-[Project Video Output](test_videos\project_video.mp4)
+[Project Video Output](./test_videos/project_output.mp4)
 
 Pipeline perform reasonably well on the entire project video.
 Identifies vehicles most of the time.
