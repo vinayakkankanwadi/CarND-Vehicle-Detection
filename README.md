@@ -3,12 +3,10 @@
 
 <img src="writeup_images/overview.PNG" width="920" alt="Combined Image" />
 
-Overview
----
+### Overview
 In this project, we will use write a software pipeline to detect vehicles in a video (start with the test_video.mp4 and later implement on full project_video.mp4) however the main product is to create a detailed writeup of the project.
 
-Goals
----
+### Goals
 - Histogram of Oriented Gradients (HOG)
   - Feature extraction on a labeled training set of images 
   - Train a classifier Linear SVM classifier using selected HOG features
@@ -20,11 +18,10 @@ Goals
   - Implement some kind of filter for false positives and some method for combining overlapping bounding boxes.
 - Reflection
 
-Files
----
+### Files
 
-Loading and Visualizing the data
----
+
+### Loading and Visualizing the data
 - Datasets provided by Udacity
   - [Car Images](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/vehicles.zip)
   - [NonCar Images](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/non-vehicles.zip)
@@ -32,8 +29,8 @@ Loading and Visualizing the data
 <img src="output_images/data_visualization.png" width="920" alt="Combined Image" />
 
 
-Histogram of Oriented Gradients (HOG) - Feature extraction from training images(HOW) and final parameters.
----
+### Histogram of Oriented Gradients (HOG) 
+    - Feature extraction from training images(HOW) and final parameters.
 **HOG FINAL PARAMETERS**
 ```
 color_space = 'YCrCb' 
