@@ -103,20 +103,20 @@ Performance was optimized by using
 
 ### Video Implementation
 #### Link to final video where pipeline perform reasonably well.
-[Project Video Input](project_video.mp4)
-[Project Video Output](./test_videos/project_output.mp4)
+- [Project Video Input](project_video.mp4)
+- [Project Video Output](./test_videos/project_output.mp4)
 
-Pipeline perform reasonably well on the entire project video.
-Identifies vehicles most of the time.
-Minimum or no flase positives infact it even identifies vehicles coming from other side at times.
-Bit woobly and unstable bounding boxes at times.
+- Pipeline perform reasonably well on the entire project video.
+- Identifies vehicles most of the time.
+- Minimum or no flase positives infact it even identifies vehicles coming from other side at times.
+- Bit woobly and unstable bounding boxes at times.
 
 ### Video Implementation
 #### Some kind of filter for false positives and some method for combining overlapping bounding boxes
-**find_cars** does **add_heat** for heatmap
-**find_cars** does **apply_threshold** for threashold
-**find_cars** which does **cells_per_step** to combining instead of overlapping for bounding boxes.
-**process_image** does scales and window sizing
+- **find_cars** does **add_heat** for heatmap
+- **find_cars** does **apply_threshold** for threashold
+- **find_cars** which does **cells_per_step** to combining instead of overlapping for bounding boxes.
+- **process_image** does scales and window sizing
 
 ### Reflection
 #### Problems and issues faced and how could it be made more robust.
@@ -124,4 +124,4 @@ Bit woobly and unstable bounding boxes at times.
   - If you do more on accuracy you start to drop boxes
   - If you do more on speed you end having false positives.
 - Probably do better in presence of shadows
-
+- Boxes could be better transition form one frame to another.
