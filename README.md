@@ -47,16 +47,16 @@ The **get_hog_features** function takes in an image and computes the Histogram o
 Takes image as input and HOG parameters **(orientations, pixels_per_cell, cells_per_block)**
 
 **Sample Result of Different HOG parameters**
-```
+
 | SVC Accuracy | Orientation | Pixels Per Cell| Feature Vector Length| Time|
-|----------|-------------|----------------|----------------------|-----|
+|:------------:|:-----------:|:--------------:|:--------------------:|----:|
 |98.59%|11|16|2|4356|237|
 |98.45%|9|16|2|4140|110|
 |97.38%|11|16|2|4356|104|
 |97.61%|9|16|2|4140|107|
 |**98.62%**|9|8|2|8460|103|
-|----------|-------------|----------------|----------------------|-----|
-```
+
+
 Accuracy and Time taken were considered when finalizing HOG Parameters
 
 The Project
