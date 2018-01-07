@@ -19,7 +19,8 @@ In this project, we will use write a software pipeline to detect vehicles in a v
 - Reflection
 
 ### Files
-
+- [Notbook](Vehicle_Detection.ipynb)
+- [Result](test_videos\project_video.mp4)
 
 ### Loading and Visualizing the data
 - Datasets provided by Udacity
@@ -39,6 +40,11 @@ orient = 9
 pix_per_cell = 8 
 cell_per_block = 2
 hog_channel = "ALL"
+spatial_size = (16, 16) # Spatial binning dimensions
+hist_bins = 16          # Number of histogram bins
+spatial_feat = True     # Spatial features on or off
+hist_feat = True        # Histogram features on or off
+hog_feat = True         # HOG features on or off
 ```
 
 The **get_hog_features** function takes in an image and computes the Histogram of Oriented Gradient (HOG).
@@ -68,7 +74,7 @@ Color Space mainly used were RGB, YUV, YCrCb.
 ### Sliding Window Search
 ##### Implementing sliding window search scales overlap windows.
 
-Final Scales and window sizing.
+Final Scales and window sizing
 ```
 scales = [1, 1.5]
 y_start_stops = [[380, 460], [380, 560]]
@@ -95,8 +101,27 @@ Performance was optimized by using
 - **threshold**
 - **window sizing**
 
+### Video Implementation
+#### Link to final video where pipeline perform reasonably well.
+[Project Video Input](project_video.mp4)
+[Project Video Output](test_videos\project_video.mp4)
 
-* Run your pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
-* Estimate a bounding box for vehicles detected.
+Pipeline perform reasonably well on the entire project video.
+Identifies vehicles most of the time.
+Minimum or no flase positives infact it even identifies vehicles coming from other side at times.
+Bit woobly and unstable bounding boxes at times.
 
-Some example images for testing your pipeline on single frames are located in the `test_images` folder.  To help the reviewer examine your work, please save examples of the output from each stage of your pipeline in the folder called `ouput_images`, and include them in your writeup for the project by describing what each image shows.    The video called `project_video.mp4` is the video your pipeline should work well on.  
+### Video Implementation
+#### Some kind of filter for false positives and some method for combining overlapping bounding boxes
+**find_cars** does **add_heat** for heatmap
+**find_cars** does **apply_threshold** for threashold
+**find_cars** which does **cells_per_step** to combining instead of overlapping for bounding boxes.
+**process_image** does scales and window sizing
+
+### Reflection
+#### Problems and issues faced and how could it be made more robust.
+- Balancing the accuracy of the classifier with execution speed was the key.
+  - If you do more on accuracy you start to drop boxes
+  - If you do more on speed you end having false positives.
+- Probably do better in presence of shadows
+
